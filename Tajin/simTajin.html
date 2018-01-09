@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- SimViArq - Simulador Para Visualizacion Arquitectonica Mx - TAJIN
+Version 2.4 - 06/12/2016
+Developer: Yohnathan Carletti
+Languages: HTML - CSS - JScript -->
+<html>
+
+<head>
+    <!-- meta charec set -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="cssSimViArq.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src=jsSimViArq.js></script>
+    <script src="jquery.maphilight.min.js"></script>
+    <script src="jquery.elevatezoom.js"></script>
+    <title>Tajin</title>
+</head>
+
+<body>
+
+    <div id="logo2">
+        <img id="logo2img" />
+    </div>
+    <div id="lightbox" class="lightbox">
+        <div class="box">
+            <h1 class="numdep" style="text-align: left">Departamento </h1><br />
+            <a class="close" href="#"><img class="close" src="IMGSimViArq/cerrar.png" /></a>
+            <div class="content">
+                <img id="piso"/>
+            </div>
+            <h5 class="indica" >Da click en la imagen para visualizar los renders</h5>
+
+            <div id="tabla">
+                <table id="detalles">
+                    <tr>
+                        <td><p id="t1">M2 de construcción</p></td>
+                        <td><h3 id="construccion">???</h3></td>
+                        <td><p id="t2"></p></td>
+                        <td><h3 id="banos">2</h3></td>
+                        <td><p id="t3">Numero de estacionamientos</p></td>
+                        <td><h3 id="estacionamientos">???</h3></td>
+                    </tr>
+                    <tr>
+                        <td><p id="t4">Número de recamaras</p></td>
+                        <td><h3 id="recamaras">2</h3></td>
+                        <td><p id="t5">M2 de terrazas</p></td>
+                        <td><h3 id="terraza">???</h3></td>
+                        <td><p id="t6">M2 de Roof Garden</p></td>
+                        <td><h3 id="roofs">2</h3></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+      <div id="lightbox2" class="lightbox2">
+        <a href="#"><img class="close2" src="IMGSimViArq/cerrar.png" /></a>
+          <div id="b2" class="box2">
+              <div id="s2" class="slider">
+                  <img id="render1"/>
+              </div>
+              <div>
+                  <a href="#" class="prev"><img src="IMGSimViArq\lessthan.png"></a>
+                  <a href="#" class="next"><img src="IMGSimViArq\morethan.png"></a>
+              </div>
+          </div>
+      </div>
+    <section id="wrapper">
+        <div id="edificio">
+            <img id="edificioimg" src="IMGSimViArq/edificio.jpg" usemap="#Map" class="map" />
+            <map name="Map" id="Map">
+                <area id="plantabaja" class="nivel" href="#" shape="poly" coords="574,1502,574,1975,1513,1972,1514,1500" />
+                <area id="piso1" class="nivel" href="#" shape="poly" coords="575,1192,573,1469,1518,1472,1514,1194" />
+                <area id="piso2" class="nivel" href="#" shape="poly" coords="574,883,574,1130,1517,1133,1513,884" />
+                <area id="piso3" class="nivel" href="#" shape="poly" coords="574,574,574,790,1517,795,1513,580" />
+                <area id="roofg" class="nivel" href="#" shape="poly" coords="539,316,539,470,1572,478,1572,324" />
+            </map>
+        </div>
+
+        <div id="planta">
+            <div id="txtcont">
+                <h1 style="text-align:left; display:inline-block; ">Nivel</h1>
+                <div id="etiquetas" style="text-align:left">
+                    <br /><img style="width:12px;" src="IMGSimViArq/green.jpg" /> Disponible
+                    <br /><img style="width:12px;" src="IMGSimViArq/yellow.jpg" /> Reservado
+                    <br /><img style="width:12px;" src="IMGSimViArq/red.jpg" /> Vendido
+                  </div>
+                  <h4 style="text-align:left; display:block;">Seleccione un departamento</h4>
+            </div>
+            <div id="imgcont">
+                <div id="pisoizq"></div>
+                <div id="pisoder"></div>
+
+                <img id="plano" usemap="#Map1" class="planopr" />
+                <map name="Map1" id="Map1">
+                    <area id="depizq" class="planodet" href="#" shape="poly" coords="287,425,285,1135,1257,1135,1257,667,1373,667,1374,425" />
+                    <area id="depder" class="planodet" href="#" shape="poly" coords="1523,427,1524,668,1637,667,1637,1135,2570,1135,2569,425" />
+                </map>
+            </div>
+            <h2>Seleccione un nivel del edificio</h2>
+
+        </div>
+    </section>
+    <div id="zoomW" class="zoomW"></div>
+    
+</body>
+
+</html>
