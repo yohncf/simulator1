@@ -1,4 +1,4 @@
-# Simulator 2 - Tajin
+# Simulator 1 - Tajin
 
 SimMontealban - Simulador -1- for Visualizacion Arquitectonica Mx (para Visualizacion Arquitectonica Mx)
 
